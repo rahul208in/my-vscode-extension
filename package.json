@@ -1,0 +1,60 @@
+{
+  "name": "my-vscode-extension",
+  "version": "1.0.0",
+  "description": "",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.showApiData"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.showApiData",
+        "title": "Show API Data"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "apiData",
+          "title": "API Data",
+          "icon": "resources/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "apiData": [
+        {
+          "id": "apiView",
+          "name": "API View"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "vsce package",
+    "compile": "webpack --mode production",
+    "watch": "webpack --watch",
+    "pretest": "npm run compile",
+    "test": "node ./out/test/runTest.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2"
+  },
+  "devDependencies": {
+    "typescript": "^4.1.2",
+    "vscode": "^1.1.37",
+    "vsce": "^1.82.0",
+    "webpack": "^5.10.0",
+    "webpack-cli": "^4.2.0"
+  }
+}

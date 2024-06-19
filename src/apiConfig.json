@@ -1,0 +1,28 @@
+{
+  "apis": [
+      {
+          "name": "Employees",
+          "url": "https://dummy.restapiexample.com/api/v1/employees"
+      },
+      {
+          "name": "Posts",
+          "url": "https://jsonplaceholder.typicode.com/posts"
+      },
+      {
+        "name": "ToDos",
+        "url": "https://jsonplaceholder.typicode.com/todos"
+    },
+
+    {
+        "name": "ToDospost",
+        "url": "https://jsonplaceholder.typicode.com/{projectid}/appname/pipelinename}"
+    },
+
+      {
+          "name": "Albums",
+          "url": "https://jsonplaceholder.typicode.com/albums"
+      }
+
+
+  ]
+}
